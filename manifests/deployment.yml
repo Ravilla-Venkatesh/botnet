@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ravillavenkateshbotnet 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ravillavenkateshbotnet
+  template:
+    metadata:
+      labels:
+        app: ravillavenkateshbotnet 
+    spec:
+      containers:
+        - name: ravillavenkateshbotnet 
+          image: ravilla.azurecr.io/ravillavenkateshbotnet
+          ports:
+          - containerPort: 5000
